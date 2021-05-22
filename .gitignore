@@ -1,0 +1,8 @@
+/vendor/
+/.idea/
+/build
+composer.lock
+phpcs.xml
+phpunit.xml
+/nbproject
+clover.xml

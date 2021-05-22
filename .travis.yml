@@ -1,0 +1,31 @@
+sudo: false
+language: php
+
+php:
+  - 7.0
+  - 7.1
+  - 7.2
+  - 7.3
+
+
+
+## Cache composer
+cache:
+  directories:
+  - $HOME/.composer/cache
+
+env:
+  matrix:
+    - AUTOLOAD=1
+    - AUTOLOAD=0
+
+before_install:
+  # Install various build dependencies. We use `travis_retry` because Composer
+  # will occasionally fail intermittently.
+  - chmod +x build.php
+  - travis_retry composer install
+
+
+script: ./build.php ${AUTOLOAD}
+
+after_script: ./vendor/bin/coveralls -v
