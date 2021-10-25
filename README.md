@@ -1,4 +1,4 @@
-# paylense-php-sdk
+# paylense-php-sdk[STILL UNDER DEVELOPMENT]
 Winopay Paylense API SDK for PHP
 
 [![Build Status](https://travis-ci.org/winopay/paylense-php-sdk.svg?branch=master)](https://travis-ci.org/winopay/paylense-php-sdk)
